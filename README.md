@@ -7,3 +7,6 @@ Windows
 
 # Note
 Put the images in the same place as the exe file for better experience.
+
+# Screenshot
+![alt text]([http://url/to/img.png](https://github.com/Sudo-Hero/BlackScreen/blob/main/Snap.PNG)https://github.com/Sudo-Hero/BlackScreen/blob/main/Snap.PNG?raw=true)
