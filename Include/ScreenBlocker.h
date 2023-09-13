@@ -52,7 +52,7 @@ int ScreenBlocker() {
     MessageBoxA(NULL, std::to_string(BlackoutTime/1000).c_str(),"Blackout Timming" , MB_OK);
     SetTimer(hMainWnd, ID_TIMER2, BlackoutTime, TimeProc);// In Minutes
     hKeyboardHook = SetWindowsHookEx(WH_KEYBOARD_LL, LowLevelKeyboardProc, hInstance, 0);
-    //hMouseHook = SetWindowsHookEx(WH_MOUSE_LL, LowLevelMouseProc, hInstance, 0);
+    hMouseHook = SetWindowsHookEx(WH_MOUSE_LL, LowLevelMouseProc, hInstance, 0);
     PostMessage(hMainWnd, WM_SYSCOMMAND, SC_MONITORPOWER, (LPARAM)2);
 
     if (hKeyboardHook == NULL || hMouseHook == NULL) {
