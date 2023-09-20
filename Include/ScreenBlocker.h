@@ -51,7 +51,7 @@ int ScreenBlocker() {
     MessageBoxA(NULL, Message.c_str(), "Blackout Timing", MB_ICONINFORMATION |MB_OK | MB_SYSTEMMODAL);
     SetTimer(hMainWnd, ID_TIMER2, BlackoutTime, TimeProc);// In Minutes
     hKeyboardHook = SetWindowsHookEx(WH_KEYBOARD_LL, LowLevelKeyboardProc, hInstance, 0);
-    hMouseHook = SetWindowsHookEx(WH_MOUSE_LL, LowLevelMouseProc, hInstance, 0);
+    //hMouseHook = SetWindowsHookEx(WH_MOUSE_LL, LowLevelMouseProc, hInstance, 0);
     PostMessage(hMainWnd, WM_SYSCOMMAND, SC_MONITORPOWER, (LPARAM)2);
 
     if (hKeyboardHook == NULL || hMouseHook == NULL) {
