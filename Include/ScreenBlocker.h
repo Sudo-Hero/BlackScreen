@@ -49,7 +49,8 @@ LRESULT CALLBACK LowLevelMouseProc(int nCode, WPARAM wParam, LPARAM lParam) {
 int ScreenBlocker() {
     HINSTANCE hInstance = GetModuleHandle(NULL);
     SetBlackoutTime(1);
-    MessageBoxA(NULL, std::to_string(BlackoutTime/1000).c_str(),"Blackout Timming" , MB_OK);
+    std::string Message = "The screen will blackout for " + std::to_string(BlackoutTime / 1000);
+    MessageBoxA(NULL, Message.c_str(), "Blackout Timing", MB_ICONINFORMATION |MB_OK | MB_SYSTEMMODAL);
     SetTimer(hMainWnd, ID_TIMER2, BlackoutTime, TimeProc);// In Minutes
     hKeyboardHook = SetWindowsHookEx(WH_KEYBOARD_LL, LowLevelKeyboardProc, hInstance, 0);
     hMouseHook = SetWindowsHookEx(WH_MOUSE_LL, LowLevelMouseProc, hInstance, 0);
