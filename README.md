@@ -5,4 +5,4 @@ Black screen is a eye protector app which enables people to protect their eyes d
 # Testing Notes
 This is the testing version:
 It allows you to move you mouse to avoid black screen for testing purpose however it still blocks keyboard. 
-It can help you to avoid waiting for timer to finish and you can still close the application while it running.
+It can help you to avoid waiting for timer to finish and you can still close the application while it's running.
